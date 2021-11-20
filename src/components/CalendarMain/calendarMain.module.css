@@ -1,0 +1,22 @@
+.container {
+  max-width: 300px;
+  max-height: 300px;
+  border: 2px solid lightcoral;
+  margin: 100px auto;
+}
+
+.title {
+  text-align: center;
+}
+
+.day_Wrap {
+  padding: 10px;
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar_wrap {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
