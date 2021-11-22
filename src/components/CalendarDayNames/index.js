@@ -1,12 +1,16 @@
-import React, { Component } from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 
-class CalendarDayNames extends Component {
-    render() {
-        const {dayIs} = this.props
-        return (
-            <p>{dayIs}</p>
-        );
-    }
-}
+/**
+ *
+ * @param {string} dayIs
+ */
+const CalendarDayNames = ({ dayIs }) => {
+  return <p>{dayIs}</p>;
+};
+
+CalendarDayNames.propTypes = {
+  dayIs: PropTypes.string.isRequired,
+};
 
 export default CalendarDayNames;

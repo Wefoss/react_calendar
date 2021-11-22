@@ -1,0 +1,21 @@
+$sm:600px;
+
+.date_now {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    color: #fff;
+    width: 100%;
+    height: 300px;
+    
+  }
+
+  @media screen and (min-width: $sm) {
+    .date_now {
+      width: 50%;
+      height: auto;
+    }
+   
+  }

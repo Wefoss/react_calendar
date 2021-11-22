@@ -1,0 +1,77 @@
+$color-green: lightseagreen;
+$sm: 600px;
+$md: 800px;
+
+.container {
+  position: relative;
+  width: 100%;
+
+  @media screen and (min-width: $sm) {
+    width: 50%;
+    margin: 10px 0px;
+  }
+  .title {
+    font-size: 1.5rem;
+    margin: 10px;
+    padding: 30px 0px 10px 0px;
+    text-align: center;
+    color: $color-green;
+  }
+  .day_wrap,
+  .calendar_wrap {
+    padding: 10px;
+    font-size: 1.5rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(7, 1fr);
+    color: lightslategray;
+  }
+  .day_wrap {
+    font-size: 2rem;
+    font-weight: bold;
+    color: red;
+  }
+  .btn_wrap {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+  }
+
+  .btn_wrap > button {
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: $color-green;
+    color: #fff;
+    transition: all 0.1s ease;
+  }
+
+  .btn_wrap > button:active {
+    transform: translate(1px, 1px);
+    box-shadow: none;
+  }
+
+  .btn_wrap > button + button {
+    margin-left: 10px;
+  }
+  @media screen and (min-width: $sm) {
+    .btn_wrap {
+       top: 0%;
+    }
+}
+  @media screen and (min-width: $md) {
+    .title {
+      padding: 40px 0px 20px 0px;
+    }
+    .day_wrap,
+    .calendar_wrap {
+      gap: 10px;
+      padding: 10px 20px;
+    }
+   
+  }
+}
