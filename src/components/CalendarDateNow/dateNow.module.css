@@ -1,0 +1,10 @@
+.date_num {
+  font-size: 10rem;
+  font-weight: 300;
+  }
+
+.day_name {
+  position: absolute;
+  top: 12%;
+  font-size: 2rem;
+}

@@ -1,0 +1,11 @@
+.checked {
+  border-radius: 10px;
+  border: 2px solid lightcoral;
+  color: red;
+}
+
+li {
+  list-style: none;
+  padding: 5px;
+  font-size: 1.5rem;
+ }

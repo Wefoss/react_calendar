@@ -1,8 +1,10 @@
 import React from 'react';
+import styles from './CalendarItems.module.css'
 
-const CalendarItems = ({elem}) => {
+const CalendarItems = ({elem, checked}) => {
+    
     return (
-        <p>{elem}</p>
+        <li className={styles[checked]} >{elem}</li>
     );
 }
 
