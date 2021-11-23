@@ -1,21 +1,19 @@
-$sm:600px;
+@import "../../common/styles/breakpoints";
+@import "../../common/styles/varibles";
+@import "../../common/styles/templates";
 
 .date_now {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: lightblue;
-    color: #fff;
-    width: 100%;
-    height: 300px;
-    
-  }
+  position: relative;
+  @extend %flex-center;
+  background-color: lightblue;
+  color: $color-white;
+  width: 100%;
+  height: 300px;
+}
 
-  @media screen and (min-width: $sm) {
-    .date_now {
-      width: 50%;
-      height: auto;
-    }
-   
+@media screen and (min-width: $sm) {
+  .date_now {
+    width: 50%;
+    height: auto;
   }
+}

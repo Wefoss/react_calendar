@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import styles from "./CalendarItems.module.css";
+import styles from "./CalendarItems.module.scss";
 
 /**
  *
- * @param {*} param0
+ * 
  * @param {boolean} checked
  * @param {null || number} elem
  */

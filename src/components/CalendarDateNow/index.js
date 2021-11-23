@@ -1,11 +1,11 @@
 import React from "react";
-import style from './dateNow.module.css'
+import style from './dateNow.module.scss'
 import PropTypes from 'prop-types';
 
 
 /**
  * 
- * @param {*} param0 
+ *  
  * @param {string} date
  * @param {string} dayName
  */

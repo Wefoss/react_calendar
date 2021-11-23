@@ -1,6 +1,6 @@
-$color-green: lightseagreen;
-$sm: 600px;
-$md: 800px;
+@import '../../common/styles/breakpoints';
+@import '../../common/styles/varibles';
+
 
 .container {
   position: relative;
@@ -9,6 +9,9 @@ $md: 800px;
   @media screen and (min-width: $sm) {
     width: 50%;
     margin: 10px 0px;
+  }
+  @media screen and (min-width: $md) {
+   height: 470px;
   }
   .title {
     font-size: 1.5rem;
@@ -46,7 +49,7 @@ $md: 800px;
     outline: none;
     border: none;
     background-color: $color-green;
-    color: #fff;
+    color: $color-white;
     transition: all 0.1s ease;
   }
 

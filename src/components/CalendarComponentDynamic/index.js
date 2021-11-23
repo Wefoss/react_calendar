@@ -13,7 +13,7 @@ import CalendarItems from "../CalendarItems";
  * 
  */
 const CalendarComponentDynamic = ({ myDate, nextMonthHandler }) => {
-  let arrayOfCurrentDay = [];
+  let arrayOfCurrentMonth = [];
   const dayNames = ["S", "M", "T", "W", "T", "F", "S"];
 
   const getDay = () => {
@@ -23,17 +23,17 @@ const CalendarComponentDynamic = ({ myDate, nextMonthHandler }) => {
 
   const nextMonth = (str) => {
       nextMonthHandler(str)
-    arrayOfCurrentDay = [];
+    arrayOfCurrentMonth = [];
   };
 
   const listOfDays = () => {
     const nullIndex = dayNames.indexOf(format(startOfMonth(myDate), "EEEEE"));
     let numOfDAy = getDay();
     while (numOfDAy + nullIndex > 0) {
-      arrayOfCurrentDay.unshift(numOfDAy--);
+      arrayOfCurrentMonth.unshift(numOfDAy--);
     }
 
-    return arrayOfCurrentDay.map((el, id) => (
+    return arrayOfCurrentMonth.map((el, id) => (
       <CalendarItems
         key={id}
         checked={checkedCurrendDate(el)}

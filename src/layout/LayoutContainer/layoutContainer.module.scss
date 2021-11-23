@@ -1,8 +1,8 @@
-$md: 800px;
+@import '../../common/styles/varibles';
+
 
 .calendar_content {
   display: flex;
   flex-wrap: wrap;
-  background-color: #fff;
- 
-}
+  background-color: $color-white;
+ }
