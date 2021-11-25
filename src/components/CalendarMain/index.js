@@ -26,7 +26,7 @@ class CalendarMain extends Component {
       <>
         <section className={style.calendar}>
           <LayoutContainer>
-            <CalendarComponentStatic />
+            <CalendarComponentStatic myDate={myDate} />
 
             <CalendarComponentDynamic
               nextMonthHandler={this.nextMonthHandler}

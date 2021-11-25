@@ -4,12 +4,12 @@ import style from './componentStatic.module.scss'
 
 import CalendarDateNow from "../CalendarDateNow";
 
-const CalendarComponentStatic = () => {
+const CalendarComponentStatic = ({myDate}) => {
   return (
     <article className={style.date_now}>
       <CalendarDateNow
-        date={format(new Date(), "dd")}
-        dayName={format(new Date(), "EEEE")}
+        date={format(myDate, "dd")}
+        dayName={format(myDate, "EEEE")}
       />
     </article>
   );
