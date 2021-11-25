@@ -12,7 +12,7 @@ import CalendarItems from "../CalendarItems";
  * @param {Function} nextMonthHandler 
  * 
  */
-const CalendarComponentDynamic = ({ myDate, nextMonthHandler }) => {
+const CalendarComponentDynamic = ({ myDate, nextMonthHandler, staticDate }) => {
   let arrayOfCurrentMonth = [];
   const dayNames = ["S", "M", "T", "W", "T", "F", "S"];
 
@@ -46,7 +46,7 @@ const CalendarComponentDynamic = ({ myDate, nextMonthHandler }) => {
   const checkedCurrendDate = (el) => {
     return (
       +format(myDate, "d") === el &&
-      format(new Date(), "dd MMM yyyy") === format(myDate, "dd MMM yyyy")
+      format(staticDate, "dd MMM yyyy") === format(myDate, "dd MMM yyyy")
     );
   };
 

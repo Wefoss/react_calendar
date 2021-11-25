@@ -10,6 +10,7 @@ class CalendarMain extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      staticDate: new Date('11-11-2022'),
       myDate: new Date(),
     };
   }
@@ -20,17 +21,26 @@ class CalendarMain extends Component {
     });
   };
 
+  componentDidMount() {
+    const {staticDate} = this.state
+     this.setState({
+      myDate: staticDate
+     })
+  } 
+  
+
   render() {
-    const { myDate } = this.state;
+    const { myDate, staticDate } = this.state;
     return (
       <>
         <section className={style.calendar}>
           <LayoutContainer>
-            <CalendarComponentStatic myDate={myDate} />
+            <CalendarComponentStatic myDate={staticDate} />
 
             <CalendarComponentDynamic
               nextMonthHandler={this.nextMonthHandler}
               myDate={myDate}
+              staticDate={staticDate}
             />
           </LayoutContainer>
         </section>
